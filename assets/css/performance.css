@@ -1,0 +1,32 @@
+/* Show content immediately, even while third-party services are loading. */
+#preloader { display: none !important; }
+img { max-width: 100%; height: auto; }
+section[id] { scroll-margin-top: 70px; }
+#home { background-attachment: scroll; }
+.home-inner { height: auto; min-height: calc(100svh - 50px); padding-bottom: 80px; }
+.home-content { overflow-wrap: break-word; }
+.blog-post-thumb.videoPost { aspect-ratio: 16 / 9; height: auto; }
+.blog-post-thumb.videoPost iframe { width: 100%; height: 100% !important; border: 0; }
+/* Isotope positions cards itself; flex gaps conflict with its measurements. */
+#protfolio-msnry { display: block; }
+#protfolio-msnry .single-port-item { flex: none; }
+.protfolio-image img { width: 100%; }
+.portfolio-category { display: flex; flex-wrap: wrap; gap: 8px; }
+.portfolio-category li { margin: 0; }
+.portfolio-category li a { display: block; padding: 10px 14px; min-height: 44px; }
+.contact-info a { overflow-wrap: anywhere; }
+a:focus-visible, button:focus-visible { outline: 3px solid #0089c9; outline-offset: 4px; }
+@media (max-width: 767px) {
+  .container { width: 100%; }
+  .home-inner { min-height: calc(100svh - 60px); padding: 100px 0 70px; }
+  .home-title { font-size: clamp(30px, 8vw, 42px); }
+  .home-subtitle { font-size: 17px; line-height: 1.6; }
+  .padd-tb-120 { padding-top: 60px; padding-bottom: 60px; }
+  .title { overflow-wrap: break-word; }
+  .contact-info li { display: block; float: none; margin: 12px 0; }
+  .footer-inner .copyright, .footer-inner .social-icons { float: none !important; text-align: center; }
+  .modal { width: 94%; max-height: 85svh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

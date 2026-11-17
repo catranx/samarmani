@@ -580,7 +580,7 @@ header.nav.hide-menu {
  ----------------------------------- */
 
 #home {
-    background: url('../../images/home-bg.jpg') no-repeat fixed center center / cover;
+    background: url('../../images/home-bg.webp') no-repeat fixed center center / cover;
 }
 
 #home .sec-overlay {
@@ -715,7 +715,7 @@ header.nav.hide-menu {
  ----------------------------------- */
 
 #skill {
-    background: url('../../images/skills-bg.jpg') no-repeat scroll center center / cover;
+    background: url('../../images/skills-bg.webp') no-repeat scroll center center / cover;
 }
 
 #skill .sec-overlay {
@@ -1326,7 +1326,7 @@ header.nav.hide-menu {
  ----------------------------------- */
 
 #funfacts {
-    background: url('../../images/fun-facts-bg.jpg') no-repeat scroll center center / cover;
+    background: url('../../images/fun-facts-bg.webp') no-repeat scroll center center / cover;
 }
 
 #funfacts .sec-inner {
@@ -1958,4 +1958,108 @@ span.num {
     .single-port-item {
         flex: 1 1 100%; /* Full width on smaller screens */
     }
+}
+
+/* Compact academic experience section */
+.academic-experience {
+  max-width: 1068px;
+  margin: 35px auto 0;
+  padding: 0 15px;
+  clear: both;
+}
+
+.academic-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.academic-heading i {
+  font-size: 24px;
+}
+
+.academic-card {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 4px;
+  padding: 18px 25px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.academic-card h5 {
+  color: #00acc1;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.academic-institutions {
+  color: #526071;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.academic-institutions span {
+  color: #94a3b8;
+  margin: 0 5px;
+}
+
+.academic-divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 12px 0;
+}
+
+.academic-description {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Experience carousel navigation */
+#experience .btn-wrapp.exp-ctrl {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 10;
+}
+
+#experience .btn-wrapp.exp-ctrl a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Prevent academic strip from affecting carousel */
+#experience .academic-experience {
+  position: relative;
+  z-index: 1;
+}
+
+/* Align academic section with Hyundai card */
+.academic-experience {
+  max-width: 1150px;
+  margin: 35px auto 0;
+  padding: 0;
+}
+
+/* Reduce vertical space above experience cards */
+#experience .carousel {
+  margin-top: -60px;
+}
+
+#experience .btn-wrapp.exp-ctrl {
+  right: 35px;
 }

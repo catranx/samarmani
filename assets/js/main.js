@@ -567,7 +567,7 @@ $(document).ready(function($){
 
 }(jQuery));
 
-$(window).load(function(){
+$(document).ready(function(){
 	
 	// section calling
 	$('.section-call-to-btn.call-to-home').waypoint({
@@ -600,7 +600,8 @@ $(window).load(function(){
 		var loading = 0;
 		var portfolioMsnry = $('#protfolio-msnry').isotope({
 			itemSelector: '.single-port-item',
-			layoutMode: 'fitRows'
+			layoutMode: 'fitRows',
+            filter: $('#portfolio-msnry-sort li.active a').data('target') || '*' 
 		});
 
 

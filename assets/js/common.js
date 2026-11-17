@@ -64,10 +64,7 @@ $(document).ready(function(){
 	}());
 
 
-	$("html").niceScroll({
-		cursorwidth: '7px',
-		zindex: '9999999'
-	});
+	// Use native scrolling for responsive touch and keyboard input.
 
 	// blog Mesonary
 	if ( $('#blog-posts').length > 0 ) {
@@ -149,15 +146,16 @@ $(window).on('load', function() {
 
 
 // callback after resize the window
+var blogResizeTimer;
 $(window).resize(function(){
+	clearTimeout(blogResizeTimer);
 
 	// Blog masonry re layout
 
-	var handler = setTimeout(function(){
+	blogResizeTimer = setTimeout(function(){
 		if ( typeof blogMsnry !== "undefined" ) {
 			blogMsnry.isotope('layout');
 		}
-		clearTimeout(handler);
-	}, 2000);
+	}, 150);
 
 });

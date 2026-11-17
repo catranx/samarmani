@@ -1,0 +1,168 @@
+/* Visual system for the optimized portfolio page. */
+:root { --ink: #12243a; --muted: #53657a; --accent: #087e8b; --night: #101f32; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: #f5f7fa; -webkit-font-smoothing: antialiased; }
+.title { font-weight: 700; letter-spacing: -.035em; text-transform: none; font-size: clamp(32px, 4vw, 48px); }
+.section-eyebrow { display: block; margin-bottom: 14px; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); }
+.section-intro { max-width: 660px; font-size: 17px; line-height: 1.75; margin: 16px 0 30px; color: var(--muted); }
+#navigation { background: #fff !important; border-bottom: 1px solid #e3e9ef; }
+.inline-menu > li > a { font-weight: 600; }
+.brand-text, .brand-text i { color: var(--accent) !important; }
+.brand-bg { background-color: var(--accent) !important; }
+#home .sec-overlay { background: linear-gradient(120deg, rgba(12,25,43,.94), rgba(12,25,43,.6)); }
+.home-title { text-transform: none; letter-spacing: -.045em; }
+.home-title span { color: #fff; }
+.home-subtitle { color: #dbe8ef; text-transform: none; line-height: 1.65; }
+.btn { border-radius: 8px; font-weight: 600; box-shadow: none; }
+.card { border-radius: 14px; border: 1px solid #e0e7ee; box-shadow: 0 6px 22px rgba(17,36,58,.05); }
+#experience { background: #edf3f6 !important; }
+#experience .title { color: var(--ink); }
+#education { background: #fff !important; }
+#portfolio { background: var(--night) !important; padding-bottom: 88px; }
+#portfolio .portfolio-top { background: transparent !important; padding: 88px 0 28px; margin-bottom: 0; }
+#portfolio .title { color: #fff; margin-bottom: 0; }
+#portfolio .section-eyebrow { color: #83dfdf; }
+#portfolio .section-intro { color: #b9c9da; }
+#portfolio .portfolio-category { gap: 10px; }
+#portfolio .portfolio-category li { float: none; margin: 0; }
+#portfolio .portfolio-category a { padding: 11px 17px; border: 1px solid #405064; border-radius: 999px; color: #dce6f1; font-size: 13px; font-weight: 600; text-transform: none; line-height: 20px; transition: background .18s, border-color .18s; }
+#portfolio .portfolio-category li.active a, #portfolio .portfolio-category a:hover, #portfolio .portfolio-category a:focus-visible { color: #102333; background: #91e3df; border-color: #91e3df; }
+#protfolio-msnry { margin-bottom: 0; }
+#protfolio-msnry > li { width: calc(33.333% - 16px); margin: 0 16px 24px 0; }
+#protfolio-msnry .protfolio-image { border: 1px solid #34465b; border-radius: 12px; overflow: hidden; background: #192c43; transition: border-color .18s; }
+#protfolio-msnry a:hover .protfolio-image, #protfolio-msnry a:focus-visible .protfolio-image { border-color: #91e3df; }
+#protfolio-msnry .protfolio-image img { width: 100%; height: 190px; object-fit: contain; background: #fff; }
+#protfolio-msnry .p-overlay { display: none; }
+#protfolio-msnry .protfolio-content { position: static; transform: none; opacity: 1; height: auto; padding: 20px; text-align: left; min-height: 104px; }
+#protfolio-msnry .protfolio-content:before { display: none; }
+#protfolio-msnry .p-title { font-size: 15px; line-height: 1.55; font-weight: 600; text-transform: none; color: #edf5fc; margin: 0; }
+#demos { background: #f2f5f9 !important; border-top: 4px solid #91e3df; padding: 88px 0; }
+#demos .section-head { margin-bottom: 22px; }
+#demos .title { color: var(--ink); }
+#demos #blog-posts { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; height: auto !important; }
+#demos #blog-posts > article { position: static !important; transform: none !important; float: none; width: auto; padding: 0; margin: 0; min-width: 0; }
+#demos .card { margin: 0; overflow: hidden; transition: box-shadow .18s, border-color .18s; }
+#demos .card:hover { border-color: #adc5d0; box-shadow: 0 12px 28px rgba(17,36,58,.1); }
+#demos .videoPost { padding-bottom: 0; aspect-ratio: 16 / 9; background: #101f32; border-bottom: 1px solid #e0e7ee; }
+#demos .post-body { padding: 24px 24px 12px; }
+#demos #blog-posts .post-title { color: var(--ink); font-size: 20px; line-height: 1.4; letter-spacing: -.02em; font-weight: 700; min-height: 0; margin: 0 0 14px; text-transform: none; }
+#demos #blog-posts .post-content { color: var(--muted); font-size: 14px; line-height: 1.8; min-height: 0; margin: 0; }
+#demos .card .card-content { padding: 16px 24px 24px; border: 0; }
+#demos .card-content a.right { float: none !important; display: inline-flex; align-items: center; gap: 10px; background: #e7f3f3; color: #076572 !important; border-radius: 7px; padding: 9px 15px; font-size: 13px; font-weight: 700; }
+#demos .card-content a.right::after { content: '↗'; font-size: 17px; }
+#demos .card-content a.right:hover { background: #cee9e9; }
+#contact { background: #102333 !important; }
+#contact .title, #contact a { color: #fff; }
+#contact .regular-text { color: #c4d3df; }
+#footer { border-top: 1px solid #e0e7ee; }
+@media (max-width: 991px) {
+  #demos #blog-posts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  #protfolio-msnry > li { width: calc(50% - 16px); }
+}
+@media (max-width: 600px) {
+  #portfolio .portfolio-top { padding-top: 56px; }
+  #portfolio { padding-bottom: 48px; }
+  #portfolio .portfolio-category a { padding: 10px 13px; font-size: 12px; }
+  #protfolio-msnry > li { width: 100%; margin-right: 0; margin-bottom: 20px; }
+  #protfolio-msnry .protfolio-image img { height: 210px; }
+  #protfolio-msnry .protfolio-content { min-height: 0; }
+  #demos { padding: 56px 0; }
+  #demos #blog-posts { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  #demos .post-body { padding: 22px 20px 10px; }
+  #demos .card .card-content { padding: 16px 20px 22px; }
+}
+/* Legacy clearfix pseudo-elements must not become grid cells. */
+#demos #blog-posts::before, #demos #blog-posts::after { display: none; }
+#demos #blog-posts .post-title { min-height: 0; }
+/* Tighter section rhythm and readable contrast across the career sections. */
+#experience, #education { padding: 60px 0; }
+#experience { background: #e3ebf1 !important; border-top: 1px solid #cbd7e2; border-bottom: 1px solid #cbd7e2; }
+#experience .section-head, #education .section-head { margin-bottom: 28px; }
+#experience .card-box-wrap, #education .card-box-wrap { width: 100%; }
+#experience .experience-inner, #education .education-inner { position: relative; }
+#experience .btn-wrapp.exp-ctrl, #education .btn-wrapp.edu-ctrl {
+  position: static; transform: none; display: flex; flex-direction: row;
+  justify-content: flex-end; gap: 10px; margin: 16px 15px 0; clear: both;
+}
+#experience .btn-wrapp a, #education .btn-wrapp a { width: 40px; height: 40px; line-height: 40px; margin: 0; box-shadow: none; border: 1px solid #b9cbd7; }
+#experience .card, #education .card { border-color: #c5d2de; box-shadow: 0 4px 14px rgba(17,36,58,.05); }
+#experience .card-title-top, #education .card-title-top { color: #42576c; background: #f0f4f7; padding: 12px 18px; font-weight: 600; font-size: 13px; margin: 0; }
+#experience .valign-wrapper.card-img-wrap, #education .valign-wrapper.card-img-wrap { min-height: 0; height: 155px; background: #fff; padding: 14px; }
+#experience .card .card-image img, #education .card .card-image img { height: 100%; width: 100%; object-fit: contain; }
+#experience .card .card-content, #education .card .card-content { padding: 16px 18px; min-height: 108px; }
+#experience .card .card-content .card-title, #education .card .card-content .card-title { color: #153e52 !important; font-weight: 600; line-height: 1.5; }
+#experience .card-content p, #experience .card-content font, #education .card-content p { color: #46596e !important; }
+#experience .academic-experience { max-width: none; margin-top: 24px; }
+#experience .academic-heading { color: #243e55; font-size: 13px; letter-spacing: .06em; }
+#experience .academic-card { border: 1px solid #c5d2de; border-left: 4px solid #087e8b; border-radius: 10px; padding: 18px 22px; box-shadow: none; }
+#experience .academic-card h5 { color: #145066; font-weight: 600; }
+#experience .academic-description { color: #46596e; }
+#portfolio .portfolio-top { padding-top: 60px; padding-bottom: 24px; }
+#portfolio .section-intro { margin: 12px 0 22px; }
+#protfolio-msnry .protfolio-image img { background: #172d43; }
+#protfolio-msnry .protfolio-content { min-height: 76px; padding: 16px 18px; }
+#protfolio-msnry > li { margin-bottom: 18px; }
+#demos { padding-top: 60px; padding-bottom: 60px; background: #e5edf3 !important; }
+#demos .section-head { margin-bottom: 8px; }
+#demos .section-intro { margin-bottom: 16px; }
+#demos .post-title-link { display: block; margin-bottom: 0 !important; }
+#demos .post-body { padding-top: 18px; }
+#demos #blog-posts .post-title { margin-bottom: 12px; }
+#footer .copyright p { color: #46596e; }
+@media (max-width: 600px) {
+  #experience, #education, #demos { padding: 42px 0; }
+  #portfolio .portfolio-top { padding-top: 42px; }
+  #experience .academic-card { padding: 16px; }
+  #experience .academic-heading { line-height: 1.5; }
+  #protfolio-msnry .protfolio-content { min-height: 0; }
+}
+/* Keep career content readable immediately instead of fading from transparent. */
+#experience .wow, #education .wow { visibility: visible !important; animation: none !important; opacity: 1 !important; transform: none !important; }
+#experience .section-head, #education .section-head { padding-bottom: 0; }
+/* Unified type scale and compact spacing throughout the optimized page. */
+body { font-size: 15px; line-height: 1.65; }
+#about, #experience, #education, #demos, #contact { padding: 40px 0; }
+#about { background: #f5f7fa !important; }
+#app .title { font-size: clamp(28px, 3.6vw, 40px); line-height: 1.2; margin: 0 0 16px; font-weight: 700; letter-spacing: -.03em; text-transform: none; }
+#app .section-head { margin: 0 0 12px; }
+#app .section-head .title { margin-bottom: 0; }
+#app .about-subtitle { color: var(--ink); font-size: 22px; line-height: 1.3; font-weight: 700; margin: 0 0 16px; text-transform: none; letter-spacing: -.02em; }
+#app .person-about { margin: 0; }
+#app .person-about p, #app .person-info h5, #app .regular-text, #app .rev-content, #app .academic-institutions, #app .academic-description { color: #46596e; font-size: 15px; line-height: 1.7; font-weight: 400; }
+#app .person-about p { margin: 0; }
+#app .person-img { margin: 0 auto; max-width: 250px; }
+#app .person-img img { border: 0; border-radius: 12px; box-shadow: none; display: block; }
+#app .person-info h5 { padding-bottom: 8px; margin: 0 0 8px; overflow-wrap: anywhere; }
+#app .person-info h5 span { color: #243e55; font-weight: 600; }
+#app .centerabout-social ul { margin: 12px 0 0; }
+#app .centerabout-social a { color: #087e8b; background: transparent !important; }
+#experience .card-element-wrapper, #education .card-element-wrapper { margin: 0; }
+#experienceSlider .owl-item > div, #educationSlider .owl-item > div { margin-top: 0; margin-bottom: 0; }
+#experience .card .card-content, #education .card .card-content { min-height: 94px; padding: 14px 16px; }
+#experience .card .card-title, #education .card .card-title { font-size: 16px; line-height: 1.45; }
+#app .card .card-content p, #app .card .card-content font { font-size: 14px; color: #46596e; }
+#experience .academic-experience { margin-top: 20px; }
+#experience .academic-card h5 { font-size: 18px; line-height: 1.4; }
+#experience .academic-heading { font-size: 12px; margin-bottom: 10px; }
+#portfolio .portfolio-top { padding-top: 40px; padding-bottom: 20px; }
+#portfolio { padding-bottom: 40px; }
+#portfolio .section-eyebrow, #demos .section-eyebrow { margin-bottom: 10px; }
+#app .section-intro { font-size: 16px; line-height: 1.65; margin: 10px 0 20px; }
+#protfolio-msnry .p-title { font-size: 15px; line-height: 1.5; }
+#protfolio-msnry .protfolio-content { min-height: 68px; padding: 14px 16px; }
+#demos #blog-posts .post-title { font-size: 18px; line-height: 1.4; margin: 0 0 10px; }
+#demos #blog-posts .post-content { font-size: 14px; line-height: 1.7; }
+#contact .regular-text { color: #c4d3df; margin-bottom: 16px; }
+#contact .contact-info { margin-bottom: 0; }
+#footer { padding: 20px 0; }
+#footer .footer-inner { padding: 0; }
+#footer p { margin: 0; font-size: 13px; }
+@media (max-width: 991px) {
+  #about .about-inner { display: flex; flex-wrap: wrap; row-gap: 24px; }
+  #about .about-inner > div:first-child { width: 100%; }
+}
+@media (max-width: 600px) {
+  #about, #experience, #education, #demos, #contact { padding: 30px 0; }
+  #portfolio .portfolio-top { padding-top: 30px; }
+  #app .person-img { max-width: 170px; }
+  #app .about-subtitle { font-size: 20px; }
+}
